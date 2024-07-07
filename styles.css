@@ -1,0 +1,65 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('an.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Text color for the content */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.content {
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for readability */
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+a {
+    color: #ffffff; /* Default link color */
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between links */
+    margin-top: 20px; /* Add some margin between links and content */
+}
+
+.nav-links a {
+    padding: 10px 20px; /* Padding around each link */
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for buttons */
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten the background on hover */
+}
