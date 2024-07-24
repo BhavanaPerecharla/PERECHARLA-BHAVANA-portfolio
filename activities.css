@@ -1,6 +1,6 @@
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-image: url('an.jpg'); /* Replace with your background image URL */
     background-size: cover;
     background-position: center;
@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -23,14 +24,18 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for readability */
     max-width: 800px;
     border-radius: 10px;
+
 }
 
 h1 {
+    font-family: 'Times New Roman', Times, serif;
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 .activity-item {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: zoomIn 0.5s ease-in-out;
     background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for each activity item */
     padding: 20px;
     margin-bottom: 20px;
@@ -52,11 +57,9 @@ h1 {
 .activity-item strong {
     font-weight: bold;
 }
-
-.activity-item:last-child {
-    margin-bottom: 0; /* Remove bottom margin for the last activity item */
-}
+/* Navigation Links */
 .nav-links {
+
     display: flex;
     justify-content: center;
     gap: 20px; /* Adjust the gap between links */
@@ -64,12 +67,86 @@ h1 {
 }
 
 .nav-links a {
-    padding: 10px 20px; /* Padding around each link */
+    padding:15px 15px 15px 15px;  /* Padding around each link */
+    font-size: 1.2em;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for buttons */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
 .nav-links a:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Lighten the background on hover */
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    width: 0%;
+    height: 0%;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes highlightFadeIn {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: #FF5733;
+    }
+}
+
