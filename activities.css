@@ -176,3 +176,8 @@ h1 {
         font-size: 18px; /* Adjusted font size for larger screens */
     }
 }
+.activity-item .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
