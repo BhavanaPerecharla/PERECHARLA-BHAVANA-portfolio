@@ -150,3 +150,29 @@ h1 {
     }
 }
 
+
+/* Button styles */
+.button-64 {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.button-64:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+@media (min-width: 768px) {
+    .button-64 {
+        font-size: 18px; /* Adjusted font size for larger screens */
+    }
+}
